@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envaudit"
+version = "0.1.0"
+description = "Keep your .env and .env.example files in sync, and make sure .env is git-ignored."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "RAMUSSS7" }]
+keywords = ["dotenv", "env", "audit", "cli", "security"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+envaudit = "envaudit.cli:main"
+
+[tool.setuptools]
+packages = ["envaudit"]
+
+[project.urls]
+Homepage = "https://github.com/RAMUSSS7/envaudit"
+Issues = "https://github.com/RAMUSSS7/envaudit/issues"
